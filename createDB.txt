@@ -1,1 +1,12 @@
-CREATE TABLE `quan_ly_sinh_vien`.`user` (`username` VARCHAR(50) NULL , `password` VARCHAR(50) NOT NULL , `fullname` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `phone` VARCHAR(50) NOT NULL , `role` VARCHAR(50) NOT NULL ) ENGINE = InnoDB;
+CREATE TABLE `student_management`.`user` (`username` VARCHAR(50) NULL , `password` VARCHAR(50) NOT NULL , `fullname` VARCHAR(50) NOT NULL , `email` VARCHAR(50) NOT NULL , `phone` VARCHAR(50) NOT NULL , `role` VARCHAR(50) NOT NULL ) ENGINE = InnoDB;
+
+INSERT INTO `user` (`username`, `password`, `fullname`, `email`, `phone`, `role`) VALUES ('student1', '123456aA@', 'truongnh', 'truongnh@gmail', '0999999999', 'student'), ('teacher1', '123456aA@', 'hainh', 'hainh@viettel', '0111111111', 'teacher');
+
+CREATE TABLE `student_management`.`message` (`id` INT NOT NULL AUTO_INCREMENT , `content` VARCHAR(200) NOT NULL , `receiver` VARCHAR(50) NOT NULL , `sender` VARCHAR(50) NOT NULL , `time` TIMESTAMP NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `student_management`.`challenge` (`id` INT NOT NULL AUTO_INCREMENT , `Description` VARCHAR(50) NOT NULL , `FileDestination` VARCHAR(100) NOT NULL , `FileName` VARCHAR(100) NOT NULL , `Name` VARCHAR(50) NOT NULL , `suggestion` VARCHAR(100) NOT NULL , `teacher` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `student_management`.`assignment` (`id` INT NOT NULL AUTO_INCREMENT , `NameAssignment` VARCHAR(50) NOT NULL , `FileDestination` VARCHAR(100) NOT NULL , `teacher` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+CREATE TABLE `student_management`.`submittedassignment` (`IdAssignment` INT NOT NULL , `username` VARCHAR(50) NOT NULL , `FileDestination` VARCHAR(100) NOT NULL , PRIMARY KEY (`IdAssignment`, `username`)) ENGINE = InnoDB;

@@ -40,7 +40,7 @@ echo 'tài khoản: ' ;echo $_SESSION['username'];
             <div class="panel-body">
                 <button class="btn btn-success" onclick="window.open('edituser.php','_self')"> Chỉnh sửa thông tin cá nhân</button>
                 <button class="btn btn-success" onclick="window.open('listuser.php','_self')"> danh sách người dùng</button>
-                <button class="btn btn-success" onclick="window.open('adduser.php','_self')"> Bài tập </button>
+                <button class="btn btn-success" onclick="window.open('listassignment.php','_self')"> Bài tập </button>
                 <button class="btn btn-success" onclick="window.open('challenge.php','_self')"> Câu đố </button>
             </div>
 

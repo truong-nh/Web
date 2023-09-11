@@ -110,10 +110,10 @@ if(isset($_POST['submit'])){
     $messlist =executeResult($sql);
     foreach ($messlist as $std){
 
-             if($std['filename']==$dapAn or $std['filename'] ==$dapAn.'.txt' ){
+             if($std['FileName']==$dapAn or $std['FileName'] ==$dapAn.'.txt' ){
 
                $thuMuc = 'uploadchallenge/';
-               $tenTep = $std['filename']; 
+               $tenTep = $std['FileName']; 
                
                // Tạo đường dẫn đầy đủ đến tệp
                $duongDanTep = $thuMuc . $tenTep;

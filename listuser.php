@@ -61,6 +61,7 @@ echo 'tài khoản: ' ;echo $_SESSION['username'];
  $sql = 'select * from user';
  $studentList =executeResult($sql);
 foreach ($studentList as $std){
+    
          echo' <tr>
          <td>'.$std['username'].'</td>
          <td>'.$std['fullname'].'</td>

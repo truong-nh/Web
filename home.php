@@ -70,7 +70,7 @@ foreach ($studentList as $std){
                     </tbody>
                 </table>
                 <button class="btn btn-success" onclick="window.open('adduser.php','_self')"> Thêm sinh viên mới </button>
-                <button class="btn btn-success" onclick="window.open('adduser.php','_self')"> Quản lý bài tập  </button>
+                <button class="btn btn-success" onclick="window.open('uploadassignment.php','_self')"> Quản lý bài tập  </button>
                 <button class="btn btn-success" onclick="window.open('uploadchallenge.php','_self')"> Challenge </button>
   
             </div>

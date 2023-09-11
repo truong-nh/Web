@@ -22,7 +22,6 @@ if (!empty($_POST)) {
   $sql = "SELECT * FROM user WHERE username = '$s_username' AND password = '$s_password'";
 
   $result = mysqli_query($connection, $sql);
-
   if(isset($_POST['login'])){
       if(mysqli_num_rows($result) === 1){
           while ($row = $result -> fetch_assoc()) {

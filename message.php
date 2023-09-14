@@ -62,16 +62,23 @@ if (isset($_GET['username'])) {
 <body>
     <div class="container">
         <div class="panel panel-primary">
-            <!-- <div class="panel-heading">
+        <div class="panel-heading">
                 <button onclick="goBack()">Quay lại</button>
                 <script>
                 function goBack() {
-                    window.open()
+                    <?php
+                    	if($_SESSION['role']=='teacher'){
+                            echo 'window.open("home.php", "_self");';
+                            }
+                            else{
+                                echo 'window.open("listuser.php", "_self");';
+                            }
+                    ?>
                 }
                 </script>
 
 
-            </div> -->
+            </div>
             <div class="panel-heading">
                 <h2 class="text-center">Gửi tin nhắn</h2>
             </div>
@@ -119,6 +126,7 @@ foreach ($messlist as $std){
          <td>'.$std['sender'].'</td>
          <td>'.$std['receiver'].'</td>';
          if($std['sender']==$_SESSION['username']){
+         echo'<td><button class="btn btn-warning" onclick = window.open("editmessage.php?id='.$std['id'].'","_self")>edit</button></td>';         
          echo '<td><button class="btn btn-danger" onclick="deleteMess('.$std['id'].')">Delete</button></td>';
          }
          echo     '</tr>';

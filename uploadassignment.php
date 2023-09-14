@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 if ($error) {
                     echo "<script>alert('Thành công');</script>";
-                    header ('Location: home.php');
+                    header ('Location: uploadassignment.php');
                 }
                 else {
                     echo "<script>alert('không thể thêm bài tập vào cơ sở dữ liệu);</script>";

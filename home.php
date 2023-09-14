@@ -49,7 +49,7 @@ echo 'tài khoản: ' ;echo $_SESSION['username'];
                     </thead>
                     <tbody>
  <?php
- $sql = 'select * from user';
+ $sql = 'select * from user  ';
  $studentList =executeResult($sql);
 foreach ($studentList as $std){
          echo' <tr>
